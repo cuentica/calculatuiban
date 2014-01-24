@@ -8,22 +8,31 @@ $(function(){
 	};
 
 	$("#ccc").mask('9999-9999-99-9999999999', maskOptions);
+	$("#ccc").on("keyup", function(){
+		if(!isAccountComplete())
+			$("button#calc").removeClass('enabled');
+	});
 
+	$("button#calc").click(function(){
+		if(isAccountComplete()){
+			var value = $("#ccc").val();
+			updateIban(value);
+			updateBic(value);
+			$('.result').addClass('visible');
+		}else{
+			alert('Por favor, introduce un código de cuenta bancaria que sea correcto.');
+		}
+		return false;
+	});
 
 });
 
-$("button#calc").click(function(){
-	if($(this).hasClass('enabled')){
-		var value = $("#ccc").val();
-		updateIban(value);
-		updateBic(value);
-		$('.result').addClass('visible');
-	}else{
-		alert('Por favor, introduce un código de cuenta bancaria que sea correcto.');
-	}
-	return false;
-});
-
+var isAccountComplete= function(){
+	var ccc = $("#ccc").val();
+	if(ccc == "" || ccc.lastIndexOf("_") != -1)
+		return false;
+	return true;
+}
 
 var updateIban = function(value){
 	var iban = generateIban(value);
