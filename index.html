@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Calcula tu código IBAN y el BIC/SWIFT</title>
+        <meta name="description" content="Calcula automáticamente tu IBAN y tu código BIC/SWIFT a partir de tu número de cuenta bancaria.">
+        <meta name="viewport" content="width=device-width">
+
+        <meta property="og:title" content="Calcula automáticamente tu IBAN y tu código BIC/SWIFT a partir de tu número de cuenta bancaria" />
+        <meta property="og:url" content="http://www.calculatuiban.com" />
+        <meta property="og:image" content="http://www.calculatuiban.com/img/screenshot.jpg" />
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/fonts.css">
+
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700' rel='stylesheet' type='text/css'>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-47442570-1', 'calculatuiban.com');
+          ga('send', 'pageview');
+
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="content">
+                <h1>Calcula tu códigos IBAN y BIC/SWIFT</h1>
+                <h2>powered by <a href="https://www.cuentica.com"></a></h2>
+                <div class="base-form register-form">
+                    <div class="ccc">
+                        <label for="ccc">Número de cuenta bancaria:</label>
+                        <input type="text" id="ccc" name="ccc" placeholder="Introduce tu CCC" value="">
+                        <span class="explanation">El número convencional de 20 dígitos.</span>
+                        <div class="button">
+                            <button id="calc">Calcular</button>
+                        </div>
+                    </div>
+                    
+                    <div class="result">
+                        <div class="iban">
+                            <label>IBAN:</label>
+                            <span id="iban" class="code"></span>
+                        </div>
+                        <div class="bic">
+                            <label>BIC/SWIFT:</label>
+                            <span id="bic" class="code"></span>
+                        </div>
+                    </div><!-- .result -->
+                    <div class="clearfix"></div>
+                </div><!-- .base-form -->
+
+                <div class="share">
+                    <a class="twitter first" href="http://twitter.com/intent/tweet?url=http//www.calculatuiban.com&text=Calcula automáticamente tu IBAN y tu código BIC/SWIFT a partir de tu número de cuenta bancaria, powered by @cuentica - http://calculatuiban.com" title="Compartir en Twitter" target="_blank" onClick="_gaq.push(['_trackEvent', 'Boton', 'Click', 'Compartir en Twitter']);"><i class="icon-twitter2"></i> Compartir página <span>en <strong>Twitter</strong></span></a>
+
+                    <a class="facebook" href="http://www.facebook.com/share.php?u=http//www.calculatuiban.com&t=Calcula automáticamente tu IBAN y tu código BIC/SWIFT a partir de tu número de cuenta bancaria, powered by @cuentica" target="_blank" onClick="_gaq.push(['_trackEvent', 'Boton', 'Click', 'Compartir en Facebook']);"><i class="icon-facebook"></i> Compartir página <span>en <strong>Facebook</strong></span></a>
+                            
+                    <a class="google" href="https://plus.google.com/share?url=http//www.calculatuiban.com" target="_blank" onClick="_gaq.push(['_trackEvent', 'Boton', 'Click', 'Compartir en Google']);"><i class="icon-google-plus"></i> Compartir página <span>en <strong>Google+</strong></span></a>
+                </div>
+            </div><!-- .content -->
+        </div><!-- .wrapper -->
+
+
+
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/jquery.maskedinput.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
