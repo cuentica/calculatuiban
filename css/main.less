@@ -225,11 +225,12 @@ body{
   background-color: @blue_light;
 }
 .wrapper{
-  width: 900px;
+  width: 85%;
+  max-width: 950px;
   margin: 0 auto;
 }
 .content{
-  margin: 40px 0px 0px 0px;
+  margin: 40px 0px 40px 0px;
   clear: both;
   position: relative;
   z-index: 2;
@@ -240,7 +241,8 @@ body{
     font-weight: @font_light;
     font-size: 2em;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    line-height: 1.3em;
   }
   h2{
     display: inline-block;
@@ -248,7 +250,7 @@ body{
     font-size: 1em;
     text-align: center;
     color: @grey_medium;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
     position: relative;
     padding-right: 170px;
     padding-top: 2px;
@@ -289,6 +291,7 @@ body{
     .ccc{
       width: 40%;
       float: left;
+      margin-top: 29px;
       span.explanation{
         display: block;
         font-size: 0.8em;
@@ -296,14 +299,14 @@ body{
         margin-top: 10px;
         font-weight: @font_light;
         line-height: 1.25em;
-        margin-bottom: 33px;
+        margin-bottom: 23px;
       }//span.explanation
       .button{
         button{
           display: block;
           outline: none;
           position: relative;
-          padding: 20px 60px 16px 60px;
+          padding: 22px 60px 17px 60px;
           width: 100%;
           border: none;
           font-size: 1.3em;
@@ -341,15 +344,15 @@ body{
       width: 55%;
       float: right;
       border: 1px solid @grey_superlight;
-      background-color: @yellow;
       padding: 30px;
-      opacity: 0;
+      background-color: rgba(255, 255, 255, 0.75);
       .transition(all, 0.3s);
       &.visible{
         opacity: 1;
+        background-color: @yellow;
       }
       .iban{
-        margin-bottom: 20px;
+        margin-bottom: 40px;
       }//.iban
       .bic{
 
@@ -358,7 +361,7 @@ body{
   }//.base-form
 
   .share{
-    margin-top: 35px;
+    margin-top: 55px;
     a{
       text-align: left;
       display: inline-block;
@@ -404,6 +407,158 @@ body{
 }//.content
 
 
+@media only screen and (max-width : 920px) {
+  .wrapper{
+    .content{
+      h1{
+        font-size: 1.8em;
+      }
+      .base-form{
+        .ccc{
+          margin-top: 0px;
+          width: 100%;
+          float: none;
+          margin-bottom: 30px;
+          .button{
+            width: 50%;
+          }
+        }//.ccc
+        .result{
+          width: 100%;
+          float: none;
+          margin-bottom: 30px;
+        }//.result
+      }//.base-form
+      .share{ 
+        margin-top: 25px;
+        a{
+          margin: 0px;
+          width: 180px;
+        }
+      }//.share
+    }//.content
+  }//.wrapper
+}//@media
+
+@media only screen and (max-width : 760px) {
+  .wrapper{
+    width: 90%;
+    .content{
+      h1{
+        font-size: 1.6em;
+        margin-bottom: 10px;
+      }
+      h2{
+        font-size: 1em;
+        margin-bottom: 50px;
+      }
+      .base-form{
+        .ccc{
+          margin-top: 0px;
+          width: 100%;
+          float: none;
+          margin-bottom: 50px;
+          .button{
+            width: 50%;
+          }
+        }//.ccc
+        .result{
+          width: 100%;
+          float: none;
+          margin-bottom: 30px;
+        }//.result
+      }//.base-form
+      .share{ 
+        margin-top: 25px;
+        a{
+          font-size: 0.7em;
+          width: 170px;
+          span{
+            display: block;
+            strong{
+              font-size: 1.3em;
+              font-weight: @font_bold;
+            }
+          }
+          i{
+            font-size: 3em;
+          }
+        }
+      }//.share
+    }//.content
+  }//.wrapper
+}//@media
+
+@media only screen and (max-width : 640px) {
+  .wrapper{
+    .content{
+      padding: 35px 25px 45px 25px;
+      h1{
+        font-size: 1.1em;
+        line-height: 1.4em;
+        margin-top: -10px;
+        margin-bottom: 20px;
+      }
+      h2{
+        color: @grey_light;
+        font-size: 0.6em;
+        line-height: 1.25em;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 0px;
+        span{
+          display: block;
+          width: 100%;
+        }
+        a{
+          display: inline-block;
+          position: relative;
+          width: 145px;
+          height: 25px;
+          margin: 5px auto 0px auto;
+        }
+      }
+      .base-form{
+        font-size: 0.7em;
+        margin-bottom: 0px;
+        .ccc{
+          margin-bottom: 30px;
+          .button{
+            width: 100%;
+            button{
+              font-size: 2em;
+              width: 100%;
+              padding: 17px 30px 14px 30px;
+            }
+          }
+        }//.ccc
+        .result{
+          padding: 0px;
+          background-color: transparent;
+          border: none;
+          &.visible{
+            background-color: transparent;
+          }
+          .iban{
+            margin-bottom: 5px;
+          }
+        }//.result
+      }//.base-form
+      .share{ 
+        margin-top: 5px;
+        a{
+          width: 100%;
+          font-size: 0.6em;
+          margin-bottom: 10px;
+          &.google{
+            margin-bottom: 0px;
+          }
+        }
+      }//.share
+    }//.content
+  }//.wrapper
+}//@media
 
 
 /* ==========================================================================

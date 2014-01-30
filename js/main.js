@@ -1,5 +1,9 @@
 $(function(){
 
+	$('.share a').on('click', function(){
+		var network = $(this).attr('name');
+	  ga('send', 'click', network , 'click', 'share-buttons');
+	});
 	var maskOptions =  { 
 	  completed: function() {
 	  	$("button#calc").addClass('enabled');

@@ -125,11 +125,12 @@ body {
   background-color: #78c0cc;
 }
 .wrapper {
-  width: 900px;
+  width: 85%;
+  max-width: 950px;
   margin: 0 auto;
 }
 .content {
-  margin: 40px 0px 0px 0px;
+  margin: 40px 0px 40px 0px;
   clear: both;
   position: relative;
   z-index: 2;
@@ -143,7 +144,8 @@ body {
   font-weight: 300;
   font-size: 2em;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+  line-height: 1.3em;
 }
 .content h2 {
   display: inline-block;
@@ -151,7 +153,7 @@ body {
   font-size: 1em;
   text-align: center;
   color: #7b7b7b;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
   position: relative;
   padding-right: 170px;
   padding-top: 2px;
@@ -193,6 +195,7 @@ body {
 .content .base-form .ccc {
   width: 40%;
   float: left;
+  margin-top: 29px;
 }
 .content .base-form .ccc span.explanation {
   display: block;
@@ -201,13 +204,13 @@ body {
   margin-top: 10px;
   font-weight: 300;
   line-height: 1.25em;
-  margin-bottom: 33px;
+  margin-bottom: 23px;
 }
 .content .base-form .ccc .button button {
   display: block;
   outline: none;
   position: relative;
-  padding: 20px 60px 16px 60px;
+  padding: 22px 60px 17px 60px;
   width: 100%;
   border: none;
   font-size: 1.3em;
@@ -248,9 +251,8 @@ body {
   width: 55%;
   float: right;
   border: 1px solid #dddbdc;
-  background-color: #fcfadd;
   padding: 30px;
-  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.75);
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
@@ -258,12 +260,13 @@ body {
 }
 .content .base-form .result.visible {
   opacity: 1;
+  background-color: #fcfadd;
 }
 .content .base-form .result .iban {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .content .share {
-  margin-top: 35px;
+  margin-top: 55px;
 }
 .content .share a {
   text-align: left;
@@ -299,6 +302,144 @@ body {
 .content .share a:hover {
   color: #2a6982;
   text-decoration: underline;
+}
+@media only screen and (max-width: 920px) {
+  .wrapper .content h1 {
+    font-size: 1.8em;
+  }
+  .wrapper .content .base-form .ccc {
+    margin-top: 0px;
+    width: 100%;
+    float: none;
+    margin-bottom: 30px;
+  }
+  .wrapper .content .base-form .ccc .button {
+    width: 50%;
+  }
+  .wrapper .content .base-form .result {
+    width: 100%;
+    float: none;
+    margin-bottom: 30px;
+  }
+  .wrapper .content .share {
+    margin-top: 25px;
+  }
+  .wrapper .content .share a {
+    margin: 0px;
+    width: 180px;
+  }
+}
+@media only screen and (max-width: 760px) {
+  .wrapper {
+    width: 90%;
+  }
+  .wrapper .content h1 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+  }
+  .wrapper .content h2 {
+    font-size: 1em;
+    margin-bottom: 50px;
+  }
+  .wrapper .content .base-form .ccc {
+    margin-top: 0px;
+    width: 100%;
+    float: none;
+    margin-bottom: 50px;
+  }
+  .wrapper .content .base-form .ccc .button {
+    width: 50%;
+  }
+  .wrapper .content .base-form .result {
+    width: 100%;
+    float: none;
+    margin-bottom: 30px;
+  }
+  .wrapper .content .share {
+    margin-top: 25px;
+  }
+  .wrapper .content .share a {
+    font-size: 0.7em;
+    width: 170px;
+  }
+  .wrapper .content .share a span {
+    display: block;
+  }
+  .wrapper .content .share a span strong {
+    font-size: 1.3em;
+    font-weight: 700;
+  }
+  .wrapper .content .share a i {
+    font-size: 3em;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .wrapper .content {
+    padding: 35px 25px 45px 25px;
+  }
+  .wrapper .content h1 {
+    font-size: 1.1em;
+    line-height: 1.4em;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+  .wrapper .content h2 {
+    color: #9c9d9d;
+    font-size: 0.6em;
+    line-height: 1.25em;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0px;
+  }
+  .wrapper .content h2 span {
+    display: block;
+    width: 100%;
+  }
+  .wrapper .content h2 a {
+    display: inline-block;
+    position: relative;
+    width: 145px;
+    height: 25px;
+    margin: 5px auto 0px auto;
+  }
+  .wrapper .content .base-form {
+    font-size: 0.7em;
+    margin-bottom: 0px;
+  }
+  .wrapper .content .base-form .ccc {
+    margin-bottom: 30px;
+  }
+  .wrapper .content .base-form .ccc .button {
+    width: 100%;
+  }
+  .wrapper .content .base-form .ccc .button button {
+    font-size: 2em;
+    width: 100%;
+    padding: 17px 30px 14px 30px;
+  }
+  .wrapper .content .base-form .result {
+    padding: 0px;
+    background-color: transparent;
+    border: none;
+  }
+  .wrapper .content .base-form .result.visible {
+    background-color: transparent;
+  }
+  .wrapper .content .base-form .result .iban {
+    margin-bottom: 5px;
+  }
+  .wrapper .content .share {
+    margin-top: 5px;
+  }
+  .wrapper .content .share a {
+    width: 100%;
+    font-size: 0.6em;
+    margin-bottom: 10px;
+  }
+  .wrapper .content .share a.google {
+    margin-bottom: 0px;
+  }
 }
 /* ==========================================================================
    Print styles
