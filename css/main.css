@@ -303,6 +303,22 @@ body {
   color: #2a6982;
   text-decoration: underline;
 }
+.footer {
+  margin-top: 50px;
+  margin-bottom: 40px;
+  font-size: 0.8em;
+  text-align: center;
+  color: #fff;
+  font-weight: 300;
+  line-height: 1.8em;
+}
+.footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+.footer a:hover {
+  color: #fcfadd;
+}
 @media only screen and (max-width: 920px) {
   .wrapper .content h1 {
     font-size: 1.8em;
